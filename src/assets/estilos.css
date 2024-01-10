@@ -1,0 +1,22 @@
+.logo {
+    height: 100px;
+}
+
+.carrito{
+    width: 3vw;
+}
+
+.alert{
+    font-size: 30px;
+}
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-transparent{
+    background-color: transparent;
+    border: none;
+}
