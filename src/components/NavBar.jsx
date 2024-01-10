@@ -1,4 +1,4 @@
-import rojozonLogo from "../../public/assets/logoRojozon.png"
+import rojozonLogo from "../assets/logoRojozon.png"
 import CartWidget from "./CartWidget";
 
 const NavBar = () => {
@@ -10,7 +10,7 @@ const NavBar = () => {
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0 justify-content-between">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
                                 <li className="nav-item">
                                     <a className="nav-link active" aria-current="page" aria-disabled="true" href="#">Inicio</a>
                                 </li>
