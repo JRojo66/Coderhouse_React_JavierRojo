@@ -1,5 +1,4 @@
 import carrito from "../assets/carrito.png"
-// cambiogit 
 
 const CartWidget = () => {
     return(
