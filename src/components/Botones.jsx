@@ -12,7 +12,7 @@ const Botones = () =>{
                     <div className="btn-group" role="group" aria-label="Basic example">
                         <button type="button" className="btn btn-primary" onClick={decrement}>-</button>
                         <button type="button" className="btn btn-primary">{counter}</button>
-                        <button type="button" className="btn btn-primary" onCgiy lick={increment}>+</button>
+                        <button type="button" className="btn btn-primary" onClick={increment}>+</button>
                         <button type="button" className="btn btn-primary" onClick={reset}>Reset</button>
                     </div>
                 </div>
