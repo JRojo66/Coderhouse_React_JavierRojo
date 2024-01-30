@@ -6,14 +6,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Error404 from './components/Error404'
 import Footer from './components/Footer'
 
-
-
   function App() {
     return (
       <>
 <BrowserRouter>
   <NavBar/>
       <Routes>
+        
         <Route path={"/"} element={<ItemListContainer/>}/>
         <Route path={"/category/:id"} element={<ItemListContainer/>}/>
         <Route path={"/item/:id"} element={<ItemDetailContainer/>}/>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ItemList from "../components/ItemList"
 import Carousel from "./Carousel";
 import { useParams } from "react-router-dom";
+import Breadcrumb from "./BreadCrumb";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
@@ -21,6 +22,11 @@ const ItemListContainer = () => {
 
     return (
         <>
+            <div className="row">
+                <div className="col">
+                    <Breadcrumb page={id}/>
+                </div>
+            </div>
             {id ? "" : <Carousel/>} 
             <ItemList items={items}/>;
         </>
