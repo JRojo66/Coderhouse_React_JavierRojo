@@ -24,7 +24,7 @@ const ItemListContainer = () => {
         <>
             <div className="row">
                 <div className="col">
-                    <Breadcrumb page={id}/>
+                    <Breadcrumb page={id} clase={"breadcrumb fs-3"}/>
                 </div>
             </div>
             {id ? "" : <Carousel/>} 
