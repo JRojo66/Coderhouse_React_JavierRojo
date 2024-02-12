@@ -1,34 +1,42 @@
-import arrayProductos from "../components/json/products.json";
 import { useEffect, useState } from "react";
 import ItemList from "../components/ItemList"
 import Carousel from "./Carousel";
 import { useParams } from "react-router-dom";
 import Breadcrumb from "./BreadCrumb";
+import {collection, getDocs, getFirestore, query, where} from "firebase/firestore"
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const {id} = useParams();
-
+    
     useEffect(() => {
-        const promesa = new Promise(resolve => {
-            setTimeout(()=>{
-                resolve(id ? arrayProductos.filter(item => item.category === id) : arrayProductos);
-            }, 2000);
-        })
-        promesa.then(data =>{
-            setItems(data);
-        })
-    }, [id]);
+        const db = getFirestore();
+        const colRef = collection(db, "items");
+        if(id) {
+            const q = query(colRef, where("category", "==", id));
+            getDocs(q).then((snapshot) => {
+                const data = snapshot.docs.map(doc => ({id: doc.id, ...doc.data()}));
+                setItems(data);
+            })
+        } else {
+            getDocs(colRef).then((snapshot) => {
+                const data = snapshot.docs.map(doc => ({id: doc.id, ...doc.data()}));
+                setItems(data);
+            })
+        }
+    },[id])
 
     return (
-        <>
+            <>
             <div className="row">
                 <div className="col">
                     <Breadcrumb page={id} clase={"breadcrumb fs-3"}/>
                 </div>
             </div>
-            {id ? "" : <Carousel/>} 
-            <ItemList items={items}/>;
+            <div className="row">
+                {id ? "" : <Carousel/>} 
+                <ItemList items={items}/>;
+            </div>
         </>
     )
 }
