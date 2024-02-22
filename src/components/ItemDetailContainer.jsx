@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ItemDetail from "../components/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getOneDocument } from "../services/firebase";
-import Loading from "./loading";
+// import Loading from "./loading";
 import Breadcrumb from "./Breadcrumb";
 
 const ItemDetailContainer = () => {
@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
           <Breadcrumb page={item.title} clase={"breadcrumb fs-5"} />
         </div>
       </div>
-      {loading ? <Loading /> : <ItemDetail item={item} />}
+      {loading ? ""/*<Loading />*/ : <ItemDetail item={item} />}
     </>
   );
 };

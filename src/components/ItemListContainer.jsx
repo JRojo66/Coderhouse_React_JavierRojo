@@ -4,7 +4,7 @@ import Carousel from "./Carousel";
 import { useParams } from "react-router-dom";
 import {collection, getFirestore, query, where} from "firebase/firestore";
 import { getDocuments, getDocumentsq } from "../services/firebase";
-import Loading from "./loading";
+// import Loading from "./loading";
 import Breadcrumb from "./Breadcrumb";
 
 const ItemListContainer = () => {
@@ -45,7 +45,7 @@ const ItemListContainer = () => {
       </div>
       <div className="row">
         {id ? "" : <Carousel />}
-        {loading ? <Loading /> : <ItemList items={items} />}
+        {loading ? ""/*<Loading />*/ : <ItemList items={items} />}
       </div>
     </>
   );
