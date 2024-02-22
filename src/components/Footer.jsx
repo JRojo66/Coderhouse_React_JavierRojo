@@ -1,4 +1,4 @@
-import LogoRojozon from "./logoRojozon";
+// import LogoRojozon from "./logoRojozon";
 
 const Footer = () => {
   return (
