@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemList from "../components/ItemList";
-import Carousel from "./Carousel";
+// import Carousel from "./Carousel";
 import { useParams } from "react-router-dom";
 import {collection, getFirestore, query, where} from "firebase/firestore";
 import { getDocuments, getDocumentsq } from "../services/firebase";
@@ -44,7 +44,7 @@ const ItemListContainer = () => {
         </div>
       </div>
       <div className="row">
-        {id ? "" : <Carousel />}
+        {id ? "" : ""/*<Carousel />*/}
         {loading ? ""/*<Loading />*/ : <ItemList items={items} />}
       </div>
     </>
