@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/logoRojozon.png";
+// import Logo from "../assets/logoRojozon.png";
 
 const LogoRojozon = ({ tamano }) => {
   return (
