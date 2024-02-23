@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
-import LogoRojozon from "./logoRojozon";
+import LogoRojozon from "../components/LogoRojozon";
 
 const NavBar = () => {
   return (

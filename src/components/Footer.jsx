@@ -1,4 +1,4 @@
-// import LogoRojozon from "./logoRojozon";
+import LogoRojozon from "../components/LogoRojozon";
 
 const Footer = () => {
   return (
@@ -95,7 +95,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="row text-center">
-          {/* <LogoRojozon tamano={80} /> */}
+          <LogoRojozon tamano={80} />
         </div>
       </div>
     </>
