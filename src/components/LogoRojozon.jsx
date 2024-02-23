@@ -4,7 +4,7 @@ import Logo from "../assets/logoRojozon.png";
 const LogoRojozon = ({ tamano }) => {
   return (
     <Link to={"/"}>
-      <img src={Logo} alt="Rojozon" width={tamano} />
+      <img src={"https://i.ibb.co/Lxynx7n/logo-Rojozon.png"} alt="Rojozon" width={tamano} />
     </Link>
   );
 };
