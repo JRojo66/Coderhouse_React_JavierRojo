@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "./CartContext";
 import { collection, addDoc, getFirestore } from "firebase/firestore";
 
@@ -8,21 +8,23 @@ const Checkout = () => {
   const [phone, setPhone] = useState();
   const [orderId, SetOrderId] = useState();
 
-  const { cart, clear, cantTotalProductos, sumaTotalProductos } =
+  const { cart, clear, sumaTotalProductos } =
     useContext(CartContext);
 
   // Validations
-
   const generateOrder = () => {
-    if (name.length === 0) {
+    if (!/^[a-zA-Z\s]+$/.test(name)) {
+      console.log("nombre");
       return false;
     }
 
-    if (email.length === 0) {
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      console.log(email);
       return false;
     }
 
-    if (phone.length === 0) {
+    if (phone.lentgh>0) {
+      console.log(phone);
       return false;
     }
 
